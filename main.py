@@ -163,12 +163,16 @@ if __name__ == '__main__':
         if multi_thread.lower() == 'y':
             try:
                 thread_count = int(input("How many threads would you like to run? : "))
-                num_sites_to_visit = int(input("How many sites would you like to visit? : "))
-                max_sites_to_visit = num_sites_to_visit
+
             except():
                 print("Incorrect input...")
                 break
-
+        try:
+            num_sites_to_visit = int(input("How many sites would you like to visit? : "))
+            max_sites_to_visit = num_sites_to_visit
+        except():
+            print("Incorrect input...")
+            break
         invalid_input = False
 
     url_input = input("Enter the a valid URL you wish to scrape: ")
